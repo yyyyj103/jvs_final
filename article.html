@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>한라산과자점 | 작업 소개</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/article.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,0,0" />
+</head>
+<body>
+    <button id="scroll-to-top-button">
+        <span class="material-symbols-outlined">arrow_upward</span>
+        TOP
+    </button>
+
+    <header id="header" class="hand">
+        <h2 class="hide">한라산과자점</h2>
+        <a href="./index.html">
+            <img src="./images/logo.png" alt="한라산 과자점 로고">
+        </a>
+        <nav>
+            <span id="open" class="material-symbols-outlined" onclick="openMenu()">menu</span>
+            <div id="container">
+                <span id="close" class="material-symbols-outlined" onclick="closeMenu()">close</span>
+                <ul id="header-nav">
+                    <li><a href="./product.html">상품 소개</a></li>
+                    <li><a href="./article.html">작업 소개</a></li>
+                    <li><a href="./info.html">오시는 길</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section class="gallery-wrap">
+        <article class="gallery-center" id="galleryCenter">
+            <div class="gallery-box">
+                <a href=""><img src="./images/article/article1.jpg" alt=""></a>
+                <a href=""><img src="./images/article/article2.jpg" alt=""></a>
+            </div>
+            <div class="gallery-box">
+                <a href=""><img src="./images/article/article3.jpg" alt=""></a>
+                <a href=""><img src="./images/article/article4.jpg" alt=""></a>
+            </div>
+            <div class="gallery-box">
+                <a href=""><img src="./images/article/article5.jpg" alt=""></a>
+                <a href=""><img src="./images/article/article6.jpg" alt=""></a>
+            </div>
+            <div class="gallery-box">
+                <a href=""><img src="./images/article/article7.jpg" alt=""></a>
+                <a href=""><img src="./images/article/article8.jpg" alt=""></a>
+            </div>
+            <div class="gallery-box">
+                <a href=""><img src="./images/article/article9.jpg" alt=""></a>
+                <a href=""><img src="./images/article/article10.jpg" alt=""></a>
+            </div>
+            <div class="gallery-box">
+                <a href=""><img src="./images/article/article11.jpg" alt=""></a>
+                <a href=""><img src="./images/article/article12.jpg" alt=""></a>
+            </div>
+            <div class="gallery-box">
+                <a href=""><img src="./images/article/article13.jpg" alt=""></a>
+                <a href=""><img src="./images/article/article14.jpg" alt=""></a>
+            </div>
+            <div class="gallery-box">
+                <a href=""><img src="./images/article/article15.jpg" alt=""></a>
+                <a href=""><img src="./images/article/article16.jpg" alt=""></a>
+            </div>
+
+        </article>
+    </section>
+
+    <footer>
+        <div id="left">
+            <img src="./images/logo-pic.jpg" alt="그림 로고">
+            <div id="comment">
+                <h2>한라산과자점</h2>
+                <p id="time">11:00~17:00 (Tue, Wed Closed)</p>
+            </div>
+            <p id="c">COPYRIGHT 2022 HALLA COOKIESHOP. ALL RIGHTS RESERVED</p>        
+        </div>
+
+        <div id="right">
+            <a href="mailto:halla.cookieshop@gmail.com"><img src="./images/icon-mail.png" alt="메일 아이콘"></a>
+            <a href="https://www.instagram.com/halla_cookieshop/"><img src="./images/icon-sns.png" alt="인스타그램 아이콘"></a>
+            <p>대표 김성용 | 등록번호 108-41-00710  | 통신판매업 제2023-제주대천-18호</p>
+            <p>제주특별자치도 서귀포시 월드컵로 105 |  070-4129-0105</p>    
+        </div>
+    </footer>
+
+
+    <script>
+                //스크롤탑 버튼
+                function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        }
+        window.addEventListener('scroll', function () {
+            var button = document.getElementById('scroll-to-top-button');
+            if (window.pageYOffset > 100) {
+                button.style.display = 'block';
+            }
+            else {
+                button.style.display = 'none';
+            }
+        });
+        var button = document.querySelector("#scroll-to-top-button");
+        button.addEventListener("click", scrollToTop);
+
+
+        //헤더 스크롤 조절
+        var myHeader = document.getElementById("header"); 
+        var isHeaderVisible = true; 
+        var previousScrollPosition = 0; 
+        
+        myHeader.onmouseover = function(){  
+            this.classList.add("over") 
+        }
+        myHeader.onmouseout = function(){ 
+            this.classList.remove("over") 
+        }
+
+        window.addEventListener("scroll", function(){ /*스크롤 시*/
+            var currentScrollPosition = window.scrollY; /* 현재 스크롤 위치를 저장 */
+
+            if(currentScrollPosition > previousScrollPosition && currentScrollPosition > 1100 && isHeaderVisible){ /*스크롤 y값이 1100이 넘으면*/
+                myHeader.style.top = -150 + "px"; /*헤더 css의 top위치를 -150px 한다*/
+                isHeaderVisible = false;
+            }
+            else if ((currentScrollPosition < previousScrollPosition || currentScrollPosition <= 200) && !isHeaderVisible){ /*200을 넘지 않을 시*/
+                myHeader.style.top = 0; /*헤더 css의 top위치를 0px 한다*/
+                isHeaderVisible = true;
+            }
+
+            previousScrollPosition = currentScrollPosition; /* 이전 스크롤 위치 업데이트 */
+        }); 
+
+
+        //헤더 메뉴 햄버거 바
+        function openMenu(){
+            document.getElementById('container').style.right='0';
+            document.getElementById('header-nav').style.opacity='1';
+        }
+        function closeMenu(){
+            document.getElementById('container').style.right='-100%';
+            document.getElementById('header-nav').style.opacity='0';
+        }
+
+        //스크롤 이벤트
+        var gallerycenter = document.getElementById('galleryCenter');
+var count = 0;
+
+window.addEventListener('wheel', function(event){
+    if(event.deltaY < 0){
+        count -= 10;
+        console.log(count);
+
+        gallerycenter.style.transform = 'translate(-50%, -50%) perspective(1000px) rotateY('+count+'deg)'
+    }
+    else if(event.deltaY > 0){
+        count += 10;
+        console.log(count);
+
+        gallerycenter.style.transform = 'translate(-50%, -50%) perspective(1000px) rotateY('+count+'deg)'
+    }
+});
+    </script>
+</body>
+</html>
