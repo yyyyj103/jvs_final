@@ -1,0 +1,176 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Noto Sans KR', sans-serif;
+    color: #353535;
+    font-size: 20px;
+}
+a{
+    text-decoration: none;
+    cursor: pointer;
+    color: #353535;
+}
+li{
+    list-style-type: none;
+}
+
+@font-face {
+    font-family: 'SangSangMullaelerOTF';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2202@1.0/SangSangMullaelerOTF.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+.hand{
+    font-family: 'SangSangMullaelerOTF';
+    font-size: 50px;
+    text-align: center;
+}
+.hide{
+    display: none;
+} 
+
+#scroll-to-top-button {
+    background-color: #ffffff00;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    display: inline-block;
+    border: none;
+    width: 40px;
+    height: 40px;
+    font-size: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 10000;
+}
+
+#scroll-to-top-button:hover {color: #395846;}
+
+#scroll-to-top-button>span {
+    display: block;
+    font-variation-settings: 'wght' 800;
+    font-size: 38px !important;
+}
+
+
+header {
+    position: fixed;
+    width: 100%; height: 150px;
+    font-size: 30px !important;
+    z-index: 1000;
+
+    transition: all 0.3s ease-in-out;
+}
+.over{
+    background-color: #fff;
+}
+header img{
+    width: 12%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 2%;
+    position: absolute;
+}
+.material-symbols-outlined{
+    float: right;
+    cursor: pointer;
+    margin: 3% 3%;
+    font-size: 50px !important;
+}
+#header-nav li a{
+    display: inline-block;
+    padding: 10px;
+    font-size: 60px;
+    margin: 30px 0;
+    transition: all 0.3s ease;
+    color: #fffbf68e;
+}
+#header-nav{
+    position: absolute;
+    top: 50%; left: 30%;
+    transform: translate(0, -50%);
+    transition: all 1s ease;
+    text-align: right;
+    opacity: 0;
+}
+#container{
+    width: 20%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: -20%;
+    background-color: #395846;
+    transition: all 0.8s ease-in-out;
+}
+#header-nav li a:hover{
+    color: #fffbf6;
+}
+#close{
+    color: #fffbf68e;
+    transition: all 0.3s ease;
+}
+#close:hover{
+    color: #fffbf6;
+}
+
+
+footer{
+    position: relative;
+    width: 100%; height: 250px;
+    display: flex;
+    justify-content: space-between;
+}
+/* footer::after{
+    content: '';
+    position: absolute;
+    top: 0;left: 0;right: 0;bottom: 0;
+    background-color: #c8c8c81f;
+} */
+#left, #right{
+    margin: 50px 200px;
+}
+#left img{
+    width: 90px;
+}
+#comment{
+    display: inline-block;
+}
+#time{
+    display: inline-block;
+}
+#left img, #comment{
+    vertical-align: middle;
+}
+#comment{
+    margin-left: 2%;
+    font-size: 15px;
+}
+#comment h2{
+    font-size: 22px;
+}
+#c{
+    width: 500px;
+    margin-top: 8%;
+    font-weight: bold;
+    font-size: 15px;
+    color: #a0a5b0;
+}
+#right{
+    text-align: right;
+    float: right;
+}
+#right a{
+    cursor: pointer;
+}
+#right a img{
+    margin: 1% 0 3% 3%;
+    width: 40px;
+}
+#right p{
+    margin-top: 4.5%;
+    font-size: 15px;
+    color: #858585;
+    width: 500px;
+}

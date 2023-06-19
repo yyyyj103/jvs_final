@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>한라산 과자점 | 메인</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,0,0" />
+</head>
+
+<body>
+    <div class="loadingpage">
+        <h2 class="hide">로딩페이지</h2>
+        <div id="canvas"></div>
+        <div class="loading">
+            <div class="loading-bar"></div>
+        </div>
+    </div>
+    <div id="content" class="hidden">
+
+        <button id="scroll-to-top-button">
+            <span class="material-symbols-outlined">arrow_upward</span>
+            TOP
+        </button>
+    
+        <header id="header" class="hand">
+            <h2 class="hide">한라산과자점</h2>
+            <a href="./index.html">
+            <img src="./images/logo.png" alt="한라산 과자점 로고">
+            </a>
+            <nav>
+                <span id="open" class="material-symbols-outlined" onclick="openMenu()">menu</span>
+                <div id="container">
+                    <span id="close" class="material-symbols-outlined" onclick="closeMenu()">close</span>
+                    <ul id="header-nav">
+                        <li><a href="./product.html">상품 소개</a></li>
+                        <li><a href="./article.html">작업 소개</a></li>
+                        <li><a href="./info.html">오시는 길</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <section id="intro1" class="intro">
+            <h2 class="hide">한라산과자점 환영페이지</h2>
+            <article id="mountain">
+                <img id="peak" src="./images/halla_peak.png" alt="한라산봉우리 그림(쿠키)">
+                <img id="halla" src="./images/halla.png" alt="한라산 그림">
+            </article>
+        </section>
+        <section id="intro2" class="intro">
+            <h2 class="hide">한라산과자점 환영페이지</h2>
+            <article id="airport">
+                <img src="./images/airport.png" alt="한라산봉우리 그림(쿠키)">
+            </article>
+        </section>
+        <section id="c-animation">
+            <div id="plane-bg"></div>
+            <img id="plane" src="./images/cookie_butter.png" alt="paper-plane">
+        </section>   
+        <section id="cookie">
+            <h2 class="hand">한라산 과자단</h2>
+            <p>1년간의 오디션을 통해 합격한 한라산과자점의 귀여운 단원들을 소개합니다.</p>
+            <article id="cw" class="hand">
+                <div>
+                    <img src="./images/땅콩.png" alt="버터쿠키 그림">
+                    <p>우도 땅콩</p>
+                </div>
+                <div>
+                    <img src="./images/한라봉.png" alt="한라봉쿠키 그림">
+                    <p>한라봉</p>
+                </div>
+                <div>
+                    <img src="./images/녹차.png" alt="말차쿠키 그림">
+                    <p>제주 녹차</p>
+                </div>
+                <div>
+                    <img src="./images/초코.png" alt="카카오쿠키 그림">
+                    <p>카카오</p>
+                </div>    
+            </article>
+        </section>
+        <section id="info">
+            <h2 class="hide">한라산과자점 소개</h2>
+            <figure id="shop">
+                <img src="./images/shop.jpg" alt="가게 외부 사진">
+                <figure id="l-t">
+                    <img id="shop-logo" src="./images/logo.png" alt="로고 사진">
+                    <figcaption>
+                        <b class="hand">한라산과자점은···</b><br>
+                        한라산이 그림처럼 펼쳐진 제주 남쪽 서귀포에서<br>
+                        맛있는 과자를 구워내고 있습니다.<br>
+                        서귀포에서 바라 본 한라산을 모티브로 한 버터쇼트브레드는<br>
+                        재료 본연의 맛을 살린 구움과자로<br>
+                        제주의 따뜻한 햇살과 자연에서 자란 로컬 재료를 사용하여 만듭니다.<br>
+                        제주의 모습을 담은 이 과자가<br>
+                        제주를 대표하는 선물로 오랫동안 사랑받기를 바라는 마음으로 정성껏 만들었습니다.
+                    </figcaption>    
+                </figure>
+            </figure>
+        </section>
+        <section class="ms">
+            <h2 class="hand">&nbsp; 대표 상품 소개</h2>
+            <article class="main">
+                <div><img src="./images/product/product1-1.jpg" alt="상품 사진 1: 초록색 포장박스 하단 쿠키 4개 배치"></div>
+                <div><img src="./images/product/product1-2.jpg" alt="상품 사진 2: 노란색 포장박스"></div>
+                <div><img src="./images/product/product3.jpg" alt="상품 사진 3: 좌측 쿠키 3개 그릇에 배치, 우측 갈색 포장박스"></div>
+            </article>    
+            <p><a href="./product.html">더 보러가기</a></p>
+        </section>    
+        <section id="article">
+            <h2 class="hand">작업 소개</h2>
+            <p id="a-t">한라산 과자점의 모든 굿즈와 그림은 직접 제작합니다.<br>
+                태블릿으로 바닥에 그렸던 그림이 한라산과자단이 되고,<br>
+                종이로 오려 붙였던 조각들이 쿠키상자가 되어가는 과정은 다시 봐도 정말 신기한 일이죠?
+            </p>
+            <p id="a-m"><a href="./article.html">더 보러가기</a></p>
+            <article class="main_box">
+                <div class="proBox active">
+                    <img src="./images/article/article1.jpg" alt="작업 사진 1">
+                </div>
+                <div class="proBox">
+                    <img src="./images/article/article2.jpg" alt="작업 사진 2">
+                </div>
+                <div class="proBox">
+                    <img src="./images/article/article3.jpg" alt="작업 사진 3">
+                </div>
+                <div class="proBox">
+                    <img src="./images/article/article4.jpg" alt="작업 사진 4">
+                </div>
+                <div class="proBox">
+                    <img src="./images/article/article5.jpg" alt="작업 사진 5">
+                </div>
+                <div class="proBox">
+                    <img src="./images/article/article6.jpg" alt="작업 사진 6">
+                </div>
+                <div class="proBox">
+                    <img src="./images/article/article7.jpg" alt="작업 사진 7">
+                </div>
+                <div class="proBox">
+                    <img src="./images/article/article8.jpg" alt="작업 사진 8">
+                </div>
+            </article>
+        </section>     
+
+        <footer>
+            <div id="left">
+                <img src="./images/logo-pic.jpg" alt="그림 로고">
+                <div id="comment">
+                    <h2>한라산과자점</h2>
+                    <p id="time">11:00~17:00 (Tue, Wed Closed)</p>
+                </div>
+                <p id="c">COPYRIGHT 2022 HALLA COOKIESHOP. ALL RIGHTS RESERVED</p>        
+            </div>
+
+            <div id="right">
+                <a href="mailto:halla.cookieshop@gmail.com"><img src="./images/icon-mail.png" alt="메일 아이콘"></a>
+                <a href="https://www.instagram.com/halla_cookieshop/"><img src="./images/icon-sns.png" alt="인스타그램 아이콘"></a>
+                <p>대표 김성용 | 등록번호 108-41-00710  | 통신판매업 제2023-제주대천-18호</p>
+                <p>제주특별자치도 서귀포시 월드컵로 105 |  070-4129-0105</p>    
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/debug.addIndicators.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/animation.gsap.min.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenLite.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TimelineLite.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/plugins/CSSPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/plugins/BezierPlugin.min.js"></script>
+  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+    <script>
+
+        // //로딩 페이지
+        const loadingBar = document.querySelector('.loading-bar');
+        const content = document.getElementById('content');
+
+        setTimeout(() => {
+            loadingBar.style.width = '100%';
+            content.classList.remove('hidden');
+            setTimeout(() => {
+                content.classList.add('active');
+                setTimeout(() => {
+                document.body.removeChild(document.querySelector('.loadingpage'));
+                }, 500);
+            }, 1000);
+        }, 3000);
+
+        //스크롤탑 버튼
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        }
+        window.addEventListener('scroll', function () {
+            var button = document.getElementById('scroll-to-top-button');
+            if (window.pageYOffset > 100) {
+                button.style.display = 'block';
+            }
+            else {
+                button.style.display = 'none';
+            }
+        });
+        var button = document.querySelector("#scroll-to-top-button");
+        button.addEventListener("click", scrollToTop);
+
+
+        //헤더 스크롤 조절
+        var myHeader = document.getElementById("header"); 
+        var isHeaderVisible = true; 
+        var previousScrollPosition = 0; 
+        
+        myHeader.onmouseover = function(){  
+            this.classList.add("over") 
+        }
+        myHeader.onmouseout = function(){ 
+            this.classList.remove("over") 
+        }
+
+        window.addEventListener("scroll", function(){ /*스크롤 시*/
+            var currentScrollPosition = window.scrollY; /* 현재 스크롤 위치를 저장 */
+
+            if(currentScrollPosition > previousScrollPosition && currentScrollPosition > 1100 && isHeaderVisible){ /*스크롤 y값이 1100이 넘으면*/
+                myHeader.style.top = -150 + "px"; /*헤더 css의 top위치를 -150px 한다*/
+                isHeaderVisible = false;
+            }
+            else if ((currentScrollPosition < previousScrollPosition || currentScrollPosition <= 200) && !isHeaderVisible){ /*200을 넘지 않을 시*/
+                myHeader.style.top = 0; /*헤더 css의 top위치를 0px 한다*/
+                isHeaderVisible = true;
+            }
+
+            previousScrollPosition = currentScrollPosition; /* 이전 스크롤 위치 업데이트 */
+        }); 
+
+
+        //헤더 메뉴 햄버거 바
+        function openMenu(){
+            document.getElementById('container').style.right='0';
+            document.getElementById('header-nav').style.opacity='1';
+        }
+        function closeMenu(){
+            document.getElementById('container').style.right='-20%';
+            document.getElementById('header-nav').style.opacity='0';
+        }
+
+        //마우스 이동에 따른 이미지 반응
+        var canvas = document.getElementById('mountain');
+        var image = document.getElementById('peak');
+
+        canvas.addEventListener('mousemove', function(event) {
+            var mouseX = event.clientX;
+            var mouseY = event.clientY;
+            var canvasRect = canvas.getBoundingClientRect();
+            
+            var offsetX = mouseX - canvasRect.left;
+            var offsetY = mouseY - canvasRect.top;
+            
+            var moveX = (offsetX / canvasRect.width - 0.5) * 40;
+            var moveY = (offsetY / canvasRect.height - 0.5) * 40;
+            
+            image.style.left = moveX + 'px';
+            image.style.top = moveY + 'px';        
+        });
+
+        //스크롤 화면 확대
+        const intros = document.querySelectorAll("section");
+        let currentIntroIndex =0;    
+        let zoom = 2;
+        const ZOOM_SPEED = 0.5;
+        let isZooming = false; // 애니메이션이 진행 중인지 여부를 확인하기 위한 변수
+
+        intros[0].style.transition = "transform 0.5s ease, opacity 0.5s ease";
+
+        document.addEventListener("wheel", function (e) {
+            e.preventDefault();
+
+            if (!isZooming) {
+                isZooming = true;
+                requestAnimationFrame(animateZoom);
+            }
+
+            if (e.deltaY > 0) {
+                zoom += ZOOM_SPEED;
+            } else {
+                zoom -= ZOOM_SPEED;
+            }
+
+            zoom = Math.max(zoom, 1);
+
+            if (zoom >= 5) {
+                zoom = 1;
+                intros[0].style.opacity = 0;
+                intros[0].style.pointerEvents = 'none';
+                setTimeout(() => {
+                    intros[0].style.display = 'none'; // display 속성을 none으로 설정하여 요소를 숨김
+                    intros[1].style.opacity = 1; // 다음 요소의 투명도를 1로 설정하여 자연스럽게 나타나도록 함
+                    intros[1].style.pointerEvents = 'auto';
+                }, 2000);  
+            }
+        });
+
+        function animateZoom() {
+            intros[currentIntroIndex].style.transform = `scale(${zoom})`;
+
+            if (Math.abs(zoom - 1) > 0.01) {
+                requestAnimationFrame(animateZoom);
+            } else {
+                isZooming = false;
+            }
+        }
+
+        //쿠키 모양으로 움직이는 애니메이션
+        const flightPath = {
+            curviness: 1,
+            autoRotate: true,
+            values: [
+                {x: -50, y: 150}, { x: 460, y:-100 }, { x: 580, y:-50 },
+                {x: 700, y:50 }, { x: 820, y:-10 }, {x: 940, y:-100}, {x: 1180, y:50},
+                {x: 1300, y:-50 }, {x: 1420, y:-100 }, {x: window.innerWidth, y: 0}
+            ]
+        }
+
+        const tween = new TimelineLite();
+
+        tween.add(
+            TweenLite.to('#plane', 1, {
+                bezier: flightPath,
+                ease: Power1.easeInOut
+            })
+        );
+
+        const controller = new ScrollMagic.Controller();
+
+        const scene = new ScrollMagic.Scene({
+            triggerElement: '#c-animation',
+            duration: 2000,
+            triggerHook: 0
+        })
+            .setTween(tween)
+            .setPin('#c-animation')
+            .addTo(controller); 
+
+
+        //상품 스크롤 시 펼쳐지게
+        window.addEventListener('scroll', function() {
+            var scrollTop = window.scrollY; //현재 스크롤
+            console.log(window.scrollY);
+
+            var rotateRange = 30; // 회전 각도 계산
+            var translateXRange = -1000;
+
+
+            if (scrollTop >= 5000 && scrollTop <= 5192) {
+                var rotateAngle = ((scrollTop - 5000) / (5380 - 5000)) * rotateRange; // 회전 각도 계산
+                var translateX = ((scrollTop - 4940) / (5380 - 5000)) * translateXRange;
+
+                var img1 = document.querySelector('.main div:nth-child(1)');
+                var img3 = document.querySelector('.main div:nth-child(3)');
+
+                img1.style.transform = 'rotate(' + (-15 + rotateAngle) + 'deg)';
+                img1.style.left = translateX + 'px';
+                img3.style.transform = 'rotate(' + (15 - rotateAngle) + 'deg)';
+                img3.style.right = translateX + 'px';
+                
+            
+            }
+            if (scrollTop == 5192) {
+                return;
+            }
+
+        });
+
+        //작업 360도 돌아가기
+        var counter =0;
+        var proCount =0;
+        window.addEventListener('wheel',function(event){
+        if (event.deltaY < 0) {
+
+                counter += 51;
+                proCount += 1;
+                //console.log(counter2)
+                $(".main_box").css({"transform":"rotate("+counter+"deg"});
+                $(".proBox").removeClass('active');
+                if(proCount > 6){proCount = 0}
+                $(".proBox").eq(proCount).addClass('active');
+                
+            }else if (event.deltaY > 0) {	
+
+                counter -= 51;
+                proCount -= 1;
+                //console.log(counter2)
+                $(".main_box").css({"transform":"rotate("+counter+"deg"});
+                $(".proBox").removeClass('active');
+                if(proCount < -6 ){proCount = 0}
+                $(".proBox").eq(proCount).addClass('active');
+
+            }
+        })
+
+</script>
+</body>
+
+</html>
