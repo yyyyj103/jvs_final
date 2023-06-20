@@ -228,7 +228,7 @@
         window.addEventListener("scroll", function(){ /*스크롤 시*/
             var currentScrollPosition = window.scrollY; /* 현재 스크롤 위치를 저장 */
 
-            if(currentScrollPosition > previousScrollPosition && currentScrollPosition > 1100 && isHeaderVisible){ /*스크롤 y값이 1100이 넘으면*/
+            if(currentScrollPosition > previousScrollPosition && currentScrollPosition > 200 && isHeaderVisible){ /*스크롤 y값이 1100이 넘으면*/
                 myHeader.style.top = -150 + "px"; /*헤더 css의 top위치를 -150px 한다*/
                 isHeaderVisible = false;
             }
